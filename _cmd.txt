@@ -1,0 +1,35 @@
+cd backend
+
+python -m venv venv
+
+venv\scripts\activate
+
+pip install -r requirements.txt
+
+pip install django
+
+django-admin startproject core .
+
+python manage.py startapp posts
+python manage.py startapp accounts
+
+
+SQL:
+create database media_post_db;
+use media_post_db
+
+After run cmd in mySQL
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser	#create super user
+python manage.py runserver		#runserver to test user/admin login (backend)
+
+FRONT
+
+delete node_modules
+delete packgae-lock.json
+rebuild the project
+
+npm run dev				#login to test the created user/admin
+
